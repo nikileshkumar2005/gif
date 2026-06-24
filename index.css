@@ -1,0 +1,273 @@
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f0f0f0;
+}
+
+.shape-container{
+    position:relative;
+    width:400px;
+    height:220px;
+}
+
+.bg-shape{
+    width:150%;
+    height:150%;
+    display:block;
+}
+
+.slide1{
+    position:absolute;
+    width:150px;
+    right: -100px;
+    top:40px;
+    animation: tvGrow 2s ease-out forwards;
+}
+
+.slide2{
+    position:absolute;
+    width:120px;
+    right:-50px;
+    bottom:30px;
+    z-index:3;
+    opacity:0;
+    animation: manShow 2s ease-out forwards;
+    animation-delay:2s;
+}
+.screen-img{
+    position:absolute;
+    width:90px;
+    height:60px;
+    right:-70px;
+    top:55px;
+    object-fit:cover;
+    z-index:2;
+    opacity:0;
+    animation: screenShow 1s ease forwards;
+    animation-delay:2s;
+}
+
+.slide3{
+    position:absolute;
+    width:50px;
+    left:170px;
+    bottom:30px;
+    z-index:3;
+    transform:scale(0);
+    animation: potGrow 1.5s ease-out forwards;
+    animation-delay:4s;
+}
+.slide11{
+    position:absolute;
+    width:50px;
+    left:160px;
+    bottom:-60px;
+    z-index:3;
+    transform:scale(0);
+    animation: potGrow 1.5s ease-out forwards;
+    animation-delay:4s;
+}
+.slide4{
+    position:absolute;
+    width:70px;
+    left:110px;
+    bottom:0px;
+    z-index:3;
+    transform:scale(0);
+    animation: persionGrow 1.5s ease-out forwards;
+    animation-delay:4s;
+}
+    .slide5{
+    position:absolute;
+    width: 75px;
+    left:200px;
+    bottom:-50px;
+    z-index:4;
+    opacity:0;
+    animation: dropLeft 1.5s ease-out forwards;
+    animation-delay:5s;
+}
+
+
+.slide6{
+    position:absolute;
+    width:80px;
+    right:10px;  
+    bottom:-50px;
+    z-index:4;
+    opacity:0;
+    animation: dropRight 1.5s ease-out forwards;
+    animation-delay:6s;
+}
+.slide7{
+    position:absolute;
+    width:80px;
+    left:400px;   
+    bottom:-10px;
+    z-index:3;
+    opacity:0;
+    animation: b3Grow 1.5s ease-out forwards;
+    animation-delay:6s;
+}
+.slide8{
+    position:absolute;
+    width:80px;
+    left:250px;   
+    bottom:30px;
+    z-index:4;
+    opacity:0;
+    animation: drops8 1.5s ease-out forwards;
+    animation-delay:7s;
+}
+.slide9{
+    position:absolute;
+    width:80px;
+    left:260px;   
+    bottom:30px;
+    z-index:4;
+    opacity:0;
+    animation: drops9 1.5s ease-out forwards;
+    animation-delay:8s;
+}
+.slide10{
+    position:absolute;
+    width:50px;
+    left:20px;      
+    bottom:80px;    
+    z-index:5;  
+    opacity: 0; 
+    animation: moveOverS9 3s linear forwards;
+    animation-delay:10s;
+}
+.slide12{
+    position:absolute;
+    width:30px;
+    left:20px;      
+    bottom:80px;    
+    z-index:5;  
+    opacity: 0; 
+    animation: moveOverS9 3s linear forwards;
+    animation-delay:10s;
+}
+
+@keyframes tvGrow{
+    from{
+        transform:scale(0);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+    
+}
+
+@keyframes manShow{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes potGrow{
+    from{
+        transform:scale(0);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+@keyframes persionGrow{
+    from{
+        transform:scale(0) rotate(0deg);
+        opacity:0;
+    }
+    to{
+        transform:scale(1) rotate(0deg);
+        opacity:1;
+    }
+}
+@keyframes dropLeft{
+    from{
+        transform: translateY(-50px);
+        opacity:0;
+    }
+    to{
+        transform: translateY(0);
+        opacity:1;
+    }
+}
+
+@keyframes dropRight{
+    from{
+        transform: translateY(-50px);
+        opacity:0;
+    }
+    to{
+        transform: translateY(0);
+        opacity:1;
+    }
+}
+@keyframes b3Grow{
+    from{
+        transform:scale(0) rotate(35deg);
+        opacity:0;
+    }
+    to{
+        transform:scale(1) rotate(30deg);
+        opacity:1;
+    }
+}
+@keyframes drops8{
+    from{
+        transform: translateY(-50px);
+        opacity:0;
+    }
+    to{
+        transform: translateY(0);
+        opacity:1;
+    }
+}
+@keyframes drops9{
+    from{
+        transform: translateY(-50px);
+        opacity:0;
+    }
+    to{
+        transform: translateY(0);
+        opacity:1;
+    }
+}
+@keyframes moveOverS9{
+     0%{
+        left:250px;
+        opacity:0;
+    }
+    5%{
+        opacity:1;
+    }
+    100%{
+        left: 270px;
+        opacity:1;
+    }
+   
+}
+@keyframes screenShow{
+    from{
+        opacity:0;
+        transform:scale(0.8);
+    }
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
